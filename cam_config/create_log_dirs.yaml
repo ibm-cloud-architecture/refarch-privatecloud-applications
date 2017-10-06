@@ -16,5 +16,5 @@ spec:
       volumes:
       - name: cam-log
         persistentVolumeClaim: 
-          claimName: cam-log
+          claimName: cam-logs-nfs
       restartPolicy: Never

@@ -29,4 +29,7 @@
     resources:
       requests:
         storage: {{ .Values.cam_logs_nfs.persistence.size | quote }}
+    selector:
+      matchLabels:
+        use: cam-log
   {{- end }}

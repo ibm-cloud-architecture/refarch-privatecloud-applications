@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: cam-log
+  name: cam-logs-nfs
 spec:
   accessModes:
     - ReadWriteMany
@@ -11,4 +11,3 @@ spec:
   selector:
     matchLabels:
       use: cam-log
-      
