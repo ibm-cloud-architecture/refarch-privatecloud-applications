@@ -1,5 +1,3 @@
-./create_namespace.sh cam
-
 PROXY_IP=169.45.207.217
 
 function create_log_pv {
@@ -43,10 +41,11 @@ function deploy_cam {
 	cd ..
 }
 
-#create_log_pv
-#create_db_pv
-#create_log_pvc
-#deploy_create_log_dirs
-#delete_log_pvc
+./create_namespace.sh cam
+
+create_log_pv
+create_db_pv
+create_log_pvc
+deploy_create_log_dirs
 deploy_cam
 
