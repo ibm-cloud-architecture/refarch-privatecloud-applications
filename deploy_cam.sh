@@ -36,16 +36,25 @@ function deploy_create_log_dirs {
 function deploy_cam {
 	echo Deploing CAM
 	cd cam_install
-	helm delete --purge cam
 	helm install --name cam --set host.ip=$PROXY_IP --set license=accept cam
 	cd ..
 }
 
-./create_namespace.sh cam
+function onboard_cam {
+	./cam_install/cam/scripts/onboard_cam.sh $PROXY_IP cam cam_config/ldap.env
+}
 
-create_log_pv
-create_db_pv
-create_log_pvc
-deploy_create_log_dirs
-deploy_cam
+function load_contents {
+	kubectl exec -n cam $(kubectl get -n cam pods | grep proxy | sed 's/[ ].*//g') \
+	/usr/src/app/camlibrary/importTemplatesToCatalog.sh $PROXY_IP testuser testuser
+}
 
+./create_namespace.sh cam 
+
+#create_log_pv
+#create_db_pv
+#create_log_pvc
+#deploy_create_log_dirs
+#deploy_cam
+onboard_cam
+#load_contents

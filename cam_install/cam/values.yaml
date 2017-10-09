@@ -39,7 +39,7 @@ cam_logs_nfs:
 
     ## Specify the name of the Existing Claim to be used by your application
     ## empty string means don't use an existClaim
-    existingClaimName: ""
+    existingClaimName: "cam-logs-nfs"
 
     ## Specify the name of the StorageClass
     ## empty string means don't use a StorageClass

@@ -1,6 +1,3 @@
-USER=cn=admin,dc=local,dc=io
-PASSWORD=admin
-
 function deploy_ldap {
 	echo Deploying LDAP chart
 	helm repo add cnct http://atlas.cnct.io
