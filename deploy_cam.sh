@@ -56,5 +56,5 @@ function load_contents {
 #create_log_pvc
 #deploy_create_log_dirs
 #deploy_cam
-onboard_cam
-#load_contents
+#onboard_cam
+load_contents
