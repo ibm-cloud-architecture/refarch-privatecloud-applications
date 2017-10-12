@@ -1,0 +1,13 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: FILE_SYSTEM
+spec:
+  capacity:
+    storage: 20Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  nfs:
+    path: "/IBM02SV625675_2/data01/FILE_SYSTEM"
+    server: fsf-wdc0401d-fz.service.softlayer.com
