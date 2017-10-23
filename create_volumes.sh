@@ -13,7 +13,7 @@ function create_pv () {
 	done
 }
 
-create_pv 'rwo' 1  30
-create_pv 'rwx' 31 50 
-create_pv 'rwx-large' 51 60 
-create_pv 'rwo-large' 61 70 
+create_pv 'rwo' 1 20
+create_pv 'rwx' 21 40
+create_pv 'rwx-large' 41 50
+create_pv 'rwo-large' 51 60
