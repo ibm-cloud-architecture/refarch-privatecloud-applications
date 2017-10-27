@@ -1,3 +1,7 @@
+FILE_SERVER=fsf-lon0201a-fz.service.softlayer.com
+FILE_PATH=/IBM02SV625675_3/data01
+
+TEMP_FILE=/tmp/volume.yaml
 
 # args: 
 # 1: file
@@ -7,8 +11,12 @@ function create_pv () {
 	for i in $(eval echo "{$2..$3}")
 	do
    		echo Creating PV $i
-#   		kubectl delete pv d-${i}
-   		sed s/FILE_SYSTEM/d-${i}/g < volume_config/$1.yaml > /tmp/volume.yaml
+   		kubectl delete pv d-${i}
+		sed s/FILE_SERVER/$FILE_SERVER/g < volume_config/$1.yaml | \
+   		sed s:FILE_PATH:$FILE_PATH:g  | \
+   		sed s/FILE_SYSTEM/d-${i}/g > $TEMP_FILE
+
+   		cat $TEMP_FILE
    		kubectl create -f /tmp/volume.yaml
 	done
 }
