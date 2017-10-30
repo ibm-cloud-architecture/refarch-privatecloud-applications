@@ -1,6 +1,7 @@
 ./create_namespace.sh jenkins
 
+NAME=jenkins
 
-helm delete --purge patro-jenkins
+helm delete --purge $NAME
 
-helm install --name patro-jenkins stable/jenkins --set Persistence.Size=1Gi,Master.ServiceType=ClusterIP
+helm install --name $NAME stable/jenkins --set Persistence.Size=1Gi,Master.ServiceType=NodePort
