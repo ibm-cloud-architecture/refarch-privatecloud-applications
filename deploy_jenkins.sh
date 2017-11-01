@@ -1,7 +1,13 @@
 ./create_namespace.sh jenkins
 
-NAME=jenkins
+#NAME=jenkins
 
-helm delete --purge $NAME
+#helm delete --purge $NAME
 
-helm install --name $NAME stable/jenkins --set Persistence.Size=1Gi,Master.ServiceType=NodePort
+#helm install --name $NAME stable/jenkins -f jenkins_config/values.yaml
+
+SLAVE_NAME=slave
+
+helm delete --purge $SLAVE_NAME
+helm install --name $SLAVE_NAME ~/github/charts/stable/slave
+
