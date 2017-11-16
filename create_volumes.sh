@@ -1,5 +1,5 @@
-FILE_SERVER=fsf-lon0201a-fz.service.softlayer.com
-FILE_PATH=/IBM02SV625675_3/data01
+FILE_SERVER=fsf-wdc0401d-fz.service.softlayer.com
+FILE_PATH=/IBM02SV625675_2/data01
 
 TEMP_FILE=/tmp/volume.yaml
 
