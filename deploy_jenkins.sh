@@ -1,10 +1,10 @@
 ./create_namespace.sh jenkins
 
-#NAME=jenkins
+NAME=jenkins
 
-#helm delete --purge $NAME
+helm delete --purge $NAME
 
-#helm install --name $NAME stable/jenkins -f jenkins_config/values.yaml
+helm install --name $NAME stable/jenkins -f jenkins_config/values.yaml
 
 SLAVE_NAME=slave
 
