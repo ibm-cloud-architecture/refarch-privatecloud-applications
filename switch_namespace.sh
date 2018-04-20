@@ -1,5 +1,5 @@
 CONTEXT=mycluster.icp-context
-USER=mycluster.icp-user
+USER=admin
 NAMESPACE=$1
 
 kubectl config set-context $CONTEXT --user=$USER --namespace=$NAMESPACE
