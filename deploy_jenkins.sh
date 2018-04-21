@@ -4,7 +4,7 @@ NAME=jenkins
 
 helm delete --purge $NAME --tls
 
-helm install --name $NAME stable/jenkins -f jenkins_config/values.yaml
+helm install --name $NAME stable/jenkins -f jenkins_config/values.yaml --tls
 
 SLAVE_NAME=slave
 

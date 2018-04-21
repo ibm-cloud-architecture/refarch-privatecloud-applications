@@ -29,6 +29,13 @@ Master:
 # HostName: jenkins.cluster.local
 # NodePort: <to set explicitly, choose port between 30000-32767
   ContainerPort: 8080
+
+  HealthProbes: true
+  HealthProbesTimeout: 60
+  # ~2 minutes to allow Jenkins to restart when upgrading plugins
+  HealthProbeLivenessFailureThreshold: 100
+  HealthProbesTimeout: 100
+
   SlaveListenerPort: 50000
   LoadBalancerSourceRanges:
   - 0.0.0.0/0
@@ -72,6 +79,7 @@ Master:
       # - secretName: jenkins.cluster.local
       #   hosts:
       #     - jenkins.cluster.local
+
 
 Agent:
   Enabled: true
