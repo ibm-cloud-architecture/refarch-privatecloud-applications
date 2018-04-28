@@ -31,10 +31,9 @@ Master:
   ContainerPort: 8080
 
   HealthProbes: true
-  HealthProbesTimeout: 60
+  HealthProbesTimeout: 1200
   # ~2 minutes to allow Jenkins to restart when upgrading plugins
   HealthProbeLivenessFailureThreshold: 100
-  HealthProbesTimeout: 100
 
   SlaveListenerPort: 50000
   LoadBalancerSourceRanges:

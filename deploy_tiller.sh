@@ -1,0 +1,1 @@
+helm init --tiller-namespace default
