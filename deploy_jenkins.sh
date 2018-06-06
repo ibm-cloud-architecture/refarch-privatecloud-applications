@@ -1,8 +1,8 @@
 TILLER_NAMESPACE=default
-./create_namespace.sh jenkins
+./createNamespace.sh jenkins
 
 NAME=jenkins
-HELM_OPTIONS="--tiller-namespace=$TILLER_NAMESPACE"
+HELM_OPTIONS="--tls"
 
 helm delete --purge $NAME $HELM_OPTIONS
 

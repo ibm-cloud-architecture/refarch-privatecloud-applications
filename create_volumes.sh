@@ -1,6 +1,6 @@
 
-FILE_SERVER=fsf-sao0101b-fz.service.softlayer.com
-FILE_PATH=/IBM02SV625675_8/data01
+FILE_SERVER=10.113.154.184
+FILE_PATH=/data
 
 TEMP_FILE=/tmp/volume.yaml
 
