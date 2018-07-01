@@ -1,6 +1,6 @@
 
-FILE_SERVER=10.113.154.184
-FILE_PATH=/data
+FILE_SERVER=fsf-dal1201e-fz.adn.networklayer.com
+FILE_PATH=/IBM02SEV625675_144/data01
 
 TEMP_FILE=/tmp/volume.yaml
 
