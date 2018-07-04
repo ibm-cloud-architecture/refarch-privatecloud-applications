@@ -1,16 +1,12 @@
+. ./helm.sh
+
 ./create_namespace.sh bluecompute
 
-
-helm repo add ibmcase https://raw.githubusercontent.com/ibm-cloud-architecture/refarch-cloudnative-kubernetes/master/docs/charts/
-
-echo Enabling Pod security policy...
-cd ../refarch-cloudnative-kubernetes/PodSecurityPolicy/
-kubectl create -f bluecompute-psp.yaml
-kubectl create -f bluecompute-clusterrole.yaml
-kubectl create -f bluecompute-clusterrolebinding.yaml
+helm repo add ibmcase \
+https://raw.githubusercontent.com/ibm-cloud-architecture/refarch-cloudnative-kubernetes/master/docs/charts/bluecompute-ce
 
 echo Deleting bluecompute...
-helm delete --purge bluecompute
+helm delete --purge bluecompute $HELM_OPTIONS
 
 echo Installing bluecompute...
-helm install --name bluecompute ibmcase/bluecompute-ce
+helm install --name bluecompute ibmcase/bluecompute-ce $HELM_OPTIONS
