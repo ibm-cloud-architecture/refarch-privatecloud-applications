@@ -1,10 +1,9 @@
-
-FILE_SERVER=fsf-dal1201e-fz.adn.networklayer.com
-FILE_PATH=/IBM02SEV625675_144/data01
+FILE_SERVER=fsm-wdc0701a-fz.adn.networklayer.com
+FILE_PATH=/IBM02SEV625675_255/data01
 
 TEMP_FILE=/tmp/volume.yaml
 
-# args: 
+# args:
 # 1: file
 # 2: begin
 # 3: end

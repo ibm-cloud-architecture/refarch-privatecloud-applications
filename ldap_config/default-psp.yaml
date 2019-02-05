@@ -1,0 +1,32 @@
+{
+    "apiVersion": "extensions/v1beta1",
+    "kind": "PodSecurityPolicy",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"policy/v1beta1\",\"kind\":\"PodSecurityPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"default\",\"namespace\":\"\"},\"spec\":{\"fsGroup\":{\"rule\":\"RunAsAny\"},\"runAsUser\":{\"rule\":\"RunAsAny\"},\"seLinux\":{\"rule\":\"RunAsAny\"},\"supplementalGroups\":{\"rule\":\"RunAsAny\"},\"volumes\":[\"*\"]}}\n"
+        },
+        "creationTimestamp": "2019-01-27T22:35:22Z",
+        "name": "default",
+        "resourceVersion": "201",
+        "selfLink": "/apis/extensions/v1beta1/podsecuritypolicies/default",
+        "uid": "d54df267-2283-11e9-b011-06921c36e6f7"
+    },
+    "spec": {
+        "allowPrivilegeEscalation": true,
+        "fsGroup": {
+            "rule": "RunAsAny"
+        },
+        "runAsUser": {
+            "rule": "RunAsAny"
+        },
+        "seLinux": {
+            "rule": "RunAsAny"
+        },
+        "supplementalGroups": {
+            "rule": "RunAsAny"
+        },
+        "volumes": [
+            "*"
+        ]
+    }
+}

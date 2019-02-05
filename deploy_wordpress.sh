@@ -1,4 +1,4 @@
-TILLER_NAMESPACE=default
+TILLER_NAMESPACE=kube-system
 
 ./create_namespace.sh wordpress
 
